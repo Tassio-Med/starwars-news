@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <link rel="shortcut icon" href="/favicon.png" type="image/png"/>
         <title>Create Next App</title>
-        <h1>Projeto</h1>
       </Head>
     </div>
   )

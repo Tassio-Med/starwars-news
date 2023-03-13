@@ -8,6 +8,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
+      <h1>Página index</h1>
     </div>
   )
 }

@@ -1,10 +1,33 @@
+import { GetStaticProps } from 'next';
+import { getPrismiscClient } from '../services/prismic';
+import { RichText } from 'prismic-dom';
+
+import Prismic from '@prismicio/client';
+
 import Head from 'next/head';
 import styles from '../styles/home.module.scss';
 import Image from 'next/image';
 
 import techsImage from '../../public/imagens/logo.png';
 
-export default function Home() {
+type Content = {
+  title: string,
+  titleContent: string,
+  linkAction: string,
+  mobileTitle: string,
+  mobileContent: string,
+  webTitle: string,
+  webContent: string,
+  webBanner: string,
+}
+
+interface ContentProps {
+  content: Content;
+}
+
+export default function Home({ content }: ContentProps) {
+  console.log(content);
+
   return (
    <>
     <Head>
@@ -62,4 +85,38 @@ export default function Home() {
     </main>
    </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismiscClient();
+
+  const response = await prismic.query([
+    Prismic.Predicates.at('document.type', 'home')
+  ])
+  // console.log(response.results[0].data);
+
+  const {
+    title, sub_title, link_action,
+    mobile, mobile_content, mobile_banner,
+    title_web, web_content, web_banner
+  } = response.results[0].data;
+
+  const content = {
+    title:  RichText.asText(title),
+    titleContent:  RichText.asText(sub_title),
+    linkAction: link_action.url,
+    mobileTitle:  RichText.asText(mobile),
+    mobileContent:  RichText.asText(mobile_content),
+    webTitle:  RichText.asText(title_web),
+    webContent:  RichText.asText(web_content),
+    webBanner:  web_banner.url,
+  };
+
+
+  return {
+    props: {
+      content
+    },
+    revalidate: 60 * 2 
+  }
 }

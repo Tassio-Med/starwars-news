@@ -27,7 +27,7 @@ export default function Header() {
           </ActiveLink>
         </nav>
 
-        <a className={styles.readyButton} type="button" href="https://sujeitoprogramador.com">COMEÇAR</a>
+        <a className={styles.readyButton} type="button" href="https://youtu.be/urAnFZBx7rE">COMEÇAR</a>
 
       </div>
     </header>

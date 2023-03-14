@@ -16,6 +16,7 @@ type Content = {
   linkAction: string,
   mobileTitle: string,
   mobileContent: string,
+  mobileBanner: string,
   webTitle: string,
   webContent: string,
   webBanner: string,
@@ -36,11 +37,11 @@ export default function Home({ content }: ContentProps) {
     <main className={styles.container}>
       <div className={styles.containerHeader}>
         <section className={styles.ctaText}>
-          <h1>Bem-vindo ao mundo de Star Wars!</h1>
-          <span>Uma plataforma com cursos que vão do zero até o profissional na pratica, direto ao ponto aplicando o que usamos no mercado de trabalho. 👊</span>
-          <a>
+          <h1>{content.title}</h1>
+          <span>{content.titleContent}</span>
+          <a href={content.linkAction}>
             <button>
-              COMEÇAR AGORA!
+              COMEÇAR TOUR
             </button>
           </a>
         </section>
@@ -55,30 +56,30 @@ export default function Home({ content }: ContentProps) {
 
       <div className={styles.sectionContent}>
         <section>
-          <h2>Aprenda criar aplicativos para Android e iOS</h2>
-          <span>Você vai descobrir o jeito mais moderno de desenvolver apps nativos para iOS e Android, construindo aplicativos do zero até aplicativos.</span>
+          <h2>{content.mobileTitle}</h2>
+          <span>{content.mobileContent}</span>
         </section>
 
-        <img src="/imagens/stormtrooper.png" alt="Conteúdos desenvolvimento de apps" />
+        <img src={content.mobileBanner} alt="Conteúdos desenvolvimento de apps" />
       </div>
 
       <hr className={styles.divisor} />
 
       <div className={styles.sectionContent}>
-        <img src="/imagens/darthvader.png " alt="Conteúdos desenvolvimento de aplicacoes web" />
+        <img src={content.webBanner} alt="Conteúdos desenvolvimento de aplicacoes web" />
 
         <section>
-          <h2>Aprenda criar sistemas web</h2>
-          <span>Criar sistemas web, sites usando as tecnologias mais modernas e requisitadas pelo mercado.</span>
+          <h2>{content.webTitle}</h2>
+          <span>{content.webContent}</span>
         </section>
       </div>
-
+       
       <div className={styles.nextLevelContent}>
         <Image quality={100} src={techsImage} alt="Tecnologias" />
-        <h2>Mais de <span className={styles.alunos}>15 mil</span> já levaram sua carreira ao próximo nivel.</h2>
-        <span>E você vai perder a chance de evoluir de uma vez por todas?</span>
-        <a>
-          <button>ACESSAR TURMA!</button>
+        <h2>Pellentesque commodo <span className={styles.alunos}>15 elit</span> at imperdiet dui accumsan sit amet.</h2>
+        <span>In aliquam sem fringilla ut morbi tincidunt. </span>
+        <a href={content.linkAction}>
+          <button>ACESSAR</button>
         </a>
       </div>
 
@@ -107,6 +108,7 @@ export const getStaticProps: GetStaticProps = async () => {
     linkAction: link_action.url,
     mobileTitle:  RichText.asText(mobile),
     mobileContent:  RichText.asText(mobile_content),
+    mobileBanner: mobile_banner.url,
     webTitle:  RichText.asText(title_web),
     webContent:  RichText.asText(web_content),
     webBanner:  web_banner.url,

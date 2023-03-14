@@ -8,7 +8,7 @@ export default function Home() {
   return (
    <>
     <Head>
-      <title>Apaixonado por tecnologia - Sujeito Programador</title>
+      <title>Home | StarWars News </title>
     </Head>
     <main className={styles.container}>
       <div className={styles.containerHeader}>

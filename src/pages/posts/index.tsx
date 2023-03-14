@@ -1,3 +1,8 @@
+import { GetStaticProps } from "next";
+import { getPrismicClient } from "../../services/prismic";
+import { RichText } from "prismic-dom";
+import Prismic from '@prismicio/client';
+
 import Head from "next/head"
 
 import styles from './styles.module.scss';
@@ -7,7 +12,19 @@ import thumbImg from '../../../public/imagens/chicagobanner.jpg'
 
 import { FiChevronLeft, FiChevronsLeft, FiChevronRight, FiChevronsRight} from 'react-icons/fi';
 
-export default function Posts() {
+type Post = {
+  slug: string;
+  title: string; 
+  description: string; 
+  cover: string; 
+  updatedAt: string
+}
+
+interface PostsProps {
+  posts: Post[];
+}
+
+export default function Posts({ posts }: PostsProps) {
   return (
     <>
       <Head>
@@ -57,3 +74,39 @@ export default function Posts() {
     </>
   )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const response = await prismic.query([
+    Prismic.Predicates.at('documente.type', 'post')
+  ], {
+    orderings: '[document.last_publication_date desc]',
+    fetch: ['post.title', 'post.description', 'post.cover'],
+    pageSize: 3
+  })
+
+  // console.log(JSON.stringify(response, null, 2))
+
+  const posts = response.results.map( post => {
+    return {
+      slug: post.uid,
+      title: RichText.asText(post.data.title),
+      description: post.data.descritption.find(content => content.type === 'paragraph')?.text ?? '',
+      cover: post.data.cover.url,
+      updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      })
+    }
+  })
+
+  return {
+    props: {
+      posts
+    },
+    revalidate: 60 * 30
+  }
+}
+

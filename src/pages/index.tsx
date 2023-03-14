@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { getPrismiscClient } from '../services/prismic';
+import { getPrismicClient } from '../services/prismic';
 import { RichText } from 'prismic-dom';
 
 import Prismic from '@prismicio/client';
@@ -89,7 +89,7 @@ export default function Home({ content }: ContentProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismiscClient();
+  const prismic = getPrismicClient();
 
   const response = await prismic.query([
     Prismic.Predicates.at('document.type', 'home')

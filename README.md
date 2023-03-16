@@ -52,17 +52,6 @@ Para a construção visual do projeto foi utilizado SASS e a biblioteca React-ic
 No projeto foi utilizada a seguinte paleta de cores:
 
 
-|    HEX   | Cor |
-| ---      | ---       |
-| `#fff`| ![#fff](https://placehold.co/30x15/fff/fff.png) |
-| `##afafaf`| ![##afafaf](https://placehold.co/30x15/afafaf/afafaf.png) |
-| `#525252`| ![#525252](https://placehold.co/30x15/525252/525252.png) |
-| `#15171b`| ![#15171b](https://placehold.co/30x15/15171b/15171b.png) |
-| `#111113`| ![#111113](https://placehold.co/30x15/111113/111113.png) |
-| `#1fa4e5`| ![#1fa4e5](https://placehold.co/30x15/1fa4e5/1fa4e5.png) |
-| `#ffbe16`| ![#ffbe16](https://placehold.co/30x15/ffbe16/ffbe16.png) |
-
-
 <center>
 
 |    <center>HEX </center>    | <center>RGB</center>         |<center>Cor <center>         |
@@ -76,6 +65,7 @@ No projeto foi utilizada a seguinte paleta de cores:
 | `#ffbe16`   |`31, 164, 229`| ![#ffbe16](https://placehold.co/300x50/ffbe16/ffbe16.png)   |
 
 </center>
+
 ## Autor
 
 - [@tassio medeiros](https://github.com/Tassio-Med)

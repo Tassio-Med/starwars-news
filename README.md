@@ -1,6 +1,7 @@
 
 
-# Bem-vindo ao Task Board!
+<h1>Bem-vindo ao Task Board!</h1>
+<h3>i</h3>
 
 Este projeto foi desenvolvido com o intuito de colocar em prática meus conhecimentos de Desenvolvimento Web, especificamente tratando-se do uso do [NextJS](https://nextjs.org/) e [Prismic](https://prismic.io/). 
 Aqui você pode conhecer um pouco sobre minhas hard skills. 
@@ -44,7 +45,6 @@ git@github.com:Tassio-Med/starwars-news.git
 npm install
 ```
 
-<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
 ## Design
 
@@ -54,15 +54,15 @@ No projeto foi utilizada a seguinte paleta de cores:
 
 <center>
 
-|    <center>HEX </center>    | <center>RGB</center>         |<center>Cor <center>         |
-| ---         |---            | ---                                                        |
-| `#fff`      |`255, 255, 255`| ![#fff](https://placehold.co/300x50/fff/fff.png)           |
-| `##afafaf`  |`175, 175, 175`| ![##afafaf](https://placehold.co/300x50/afafaf/afafaf.png) |
-| `#525252`   |`82, 82, 82`   | ![#525252](https://placehold.co/300x50/525252/525252.png)  |
-| `#15171b`   |`21, 23, 27`   | ![#15171b](https://placehold.co/300x50/15171b/15171b.png)  |
-| `#111113`   |`17, 17, 19`   | ![#111113](https://placehold.co/300x50/111113/111113.png)  |
-| `#1fa4e5`   |`31, 164, 229` | ![#1fa4e5](https://placehold.co/300x50/1fa4e5/1fa4e5.png)  |
-| `#ffbe16`   |`31, 164, 229`| ![#ffbe16](https://placehold.co/300x50/ffbe16/ffbe16.png)   |
+  |    <center>HEX </center>    | <center>RGB</center>         |<center>Cor <center>         |
+  | ---         |---            | ---                                                        |
+  | `#fff`      |`255, 255, 255`| ![#fff](https://placehold.co/300x50/fff/fff.png)           |
+  | `##afafaf`  |`175, 175, 175`| ![##afafaf](https://placehold.co/300x50/afafaf/afafaf.png) |
+  | `#525252`   |`82, 82, 82`   | ![#525252](https://placehold.co/300x50/525252/525252.png)  |
+  | `#15171b`   |`21, 23, 27`   | ![#15171b](https://placehold.co/300x50/15171b/15171b.png)  |
+  | `#111113`   |`17, 17, 19`   | ![#111113](https://placehold.co/300x50/111113/111113.png)  |
+  | `#1fa4e5`   |`31, 164, 229` | ![#1fa4e5](https://placehold.co/300x50/1fa4e5/1fa4e5.png)  |
+  | `#ffbe16`   |`31, 164, 229`| ![#ffbe16](https://placehold.co/300x50/ffbe16/ffbe16.png)   |
 
 </center>
 
@@ -79,5 +79,3 @@ No projeto foi utilizada a seguinte paleta de cores:
 ## EsLint
 
 Neste projeto foi utilizado o [ESLint](https://eslint.org/) para fazer a análise estática do código. Ajudando a garantir a qualidade do código de forma a tê-lo mais legível, de mais fácil manutenção e seguindo as boas práticas de desenvolvimento.
-
-<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>

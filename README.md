@@ -1,13 +1,11 @@
 
 
 <h1>Bem-vindo ao Task Board!</h1>
-<h3>i</h3>
 
 Este projeto foi desenvolvido com o intuito de colocar em prática meus conhecimentos de Desenvolvimento Web, especificamente tratando-se do uso do [NextJS](https://nextjs.org/) e [Prismic](https://prismic.io/). 
 Aqui você pode conhecer um pouco sobre minhas hard skills. 
 
-
-#### As principais habilidades colocadas prática nesse projeto foram:
+As principais habilidades colocadas prática nesse projeto foram:
 
 * **React.JS**.
 * **Next.JS**

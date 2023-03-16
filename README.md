@@ -52,7 +52,7 @@ Para a construção visual do projeto foi utilizado SASS e a biblioteca React-ic
 No projeto foi utilizada a seguinte paleta de cores:
 
 
-<center>
+<div align="center">
 
   |    <center>HEX </center>    | <center>RGB</center>         |<center>Cor <center>         |
   | ---         |---            | ---                                                        |
@@ -64,7 +64,7 @@ No projeto foi utilizada a seguinte paleta de cores:
   | `#1fa4e5`   |`31, 164, 229` | ![#1fa4e5](https://placehold.co/300x50/1fa4e5/1fa4e5.png)  |
   | `#ffbe16`   |`31, 164, 229`| ![#ffbe16](https://placehold.co/300x50/ffbe16/ffbe16.png)   |
 
-</center>
+</div>
 
 ## Autor
 
